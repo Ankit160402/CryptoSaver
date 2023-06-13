@@ -1,0 +1,120 @@
+body {
+    background-color: black;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.container {
+    margin: 1% auto;
+    max-width: 700px;
+}
+
+.navbar {
+    height: 8vh;
+  }
+
+
+.element {
+    margin: auto;
+    text-align: center;
+    height: 40vh;
+    width: 40vw;
+    background-color: black;
+    box-sizing: border-box;
+}
+
+.input {
+    margin: 5vh 5vh;
+    word-spacing: normal;
+    display: flex;
+  justify-content: space-between;
+}
+
+.element p {
+    height: 4vh;
+    text-align: center;
+    color: white;
+    font-size: 4vh;
+}
+
+#price {
+    height: 4vh;
+    text-align: center;
+    color: white;
+    font-size: 4vh;
+}
+
+
+.element:-ms-fullscreen p {
+    word-spacing: 20%;
+    visibility: visible;
+}
+
+.element:fullscreen {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    cursor: none;
+}
+
+.element:fullscreen p {
+    height: 10vh;
+    font-size: 10vh;
+}
+
+#info {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.input_attribute {
+    width: 30%;
+    background-color: black;
+    color: white;
+}
+
+.element img {
+    margin-right: 1.5vh;
+    height: 4vh;
+}
+
+.element:fullscreen img {
+    margin-right: 3.75vh;
+    height: 10vh;
+
+}
+
+.element div {
+    padding: 0;
+    height: 4vh;
+}
+
+.element:fullscreen div {
+    padding: 0;
+    height: 10vh;
+}
+
+
+.align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.green-highlight {
+    border-radius: 2vh;
+    border-color: green;
+    border-width: 0.25vh;
+    border-style: solid;
+}
+
+.modal-content {
+    background-color: #0E2954 /* Replace with your desired background color */
+  }

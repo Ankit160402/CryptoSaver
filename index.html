@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoSaver</title>
+  <link sizes="96x96" rel="icon" href="/image/favicon.ico">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="css\index.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="navcontainer container">
+      <a class="navbar-brand">CryptoSaver</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="other_html/news.html" target="_blank">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/Ankit160402/CryptoSaver" target="_blank">Source-Code</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="other_html/about.html" target="_blank">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal header -->
+        <div class="modal-header">
+          <h5 class="modal-title">Disclaimer</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <p>The information on this website is for general information purposes only. 
+            It is not intended to be a substitute for professional advice. 
+            Always seek the advice of a qualified professional before making any investments.
+          </p>
+          <footer style="font-weight: 100; font-size: small;">We are using the Binance's API to get real-time prices for cryptocurrencies.</footer>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="green-highlight">
+      <div class="container element align" id="element">
+        <div class="row align">
+          <div class="col">
+            <img id="img" src="https://cryptologos.cc/logos/bitcoin-btc-logo.svg">
+          </div>
+          <div class="col">
+            <p id="info"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row input">
+      <select id="crypto-select" class="form-select form-select-sm  input_attribute" onchange="handleTagChange(event)">
+      </select>
+
+      <select class="form-select form-select-sm input_attribute" onchange="handleCurrencyChange(event)">
+        <option value="USDT" selected>USDT</option>
+        <option value="BUSD">BUSD</option>
+        <option value="BTC">BTC</option>
+        <option value="ETH">ETH</option>
+        <option value="BNB">BNB</option>
+      </select>
+
+      <select class="form-select form-select-sm input_attribute" onchange="handleRefreshRateChange(event)">
+        <option value=1>1s</option>
+        <option value=2.5 selected>2.5s</option>
+        <option value=5>5s</option>
+        <option value=10>10s</option>
+      </select>
+    </div>
+
+
+
+    <p>
+      <p>Refreshing every <b id="refreshrate">2.5</b>s</p>
+    </p>
+    <p>
+      <p>Current Trading Pair: <b id="ticker">BTC</b>-<b id="currency">USDT</b></p>
+    </p>
+
+    <button class="btn btn-outline-success btn-lg" onclick=" document.getElementById('element').requestFullscreen(); ">
+      Full Screen!
+    </button>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="javascript/script.js"></script>
+
+</body>
+
+</html>
